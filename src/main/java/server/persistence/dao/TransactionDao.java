@@ -1,0 +1,15 @@
+package server.persistence.dao;
+
+import server.persistence.entity.Trx;
+
+import java.util.List;
+
+public interface TransactionDao {
+    public Trx getLastTransaction();
+    public void newTransaction(Trx trx);
+    public boolean hasData();
+    public List<Trx> getAllTransactions();
+    public Trx findByDataAndTimestamp(String data, String timestamp);
+    public void clear();
+//    public void insertAll(List<Trx> trxList);
+}
