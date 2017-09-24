@@ -56,7 +56,7 @@
     /*padding: 10px 15px;*/
     position: relative;
     transition: all 0.5s ease;
-    width: 400px;
+    width: 600px;
 
     padding: 10px 20px;
     background: #F8E391;
@@ -137,6 +137,7 @@ body {
 .content {
     display: block;
     padding: 24px 24px 16px;
+    width: 500px;
 }
 .content ul {
     display: block;

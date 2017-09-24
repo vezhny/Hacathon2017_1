@@ -65,10 +65,18 @@ public class TransactionDaoImpl implements TransactionDao {
         em.clear();
     }
 
-//    @Override
-//    public void insertAll(List<Trx> trxList) {
-//        for (Trx trx : trxList) {
-//            em.persist(trx);
-//        }
-//    }
+    @Override
+    public Trx findById(int id) {
+        return em.createQuery("SELECT t FROM Trx t WHERE t.id = :id", Trx.class).setParameter("id", id).getSingleResult();
+    }
+
+    @Override
+    public void update(Trx trx) {
+        em.merge(trx);
+    }
+
+    @Override
+    public void delete(int id) {
+        em.remove(findById(id));
+    }
 }

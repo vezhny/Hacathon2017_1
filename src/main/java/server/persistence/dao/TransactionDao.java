@@ -11,5 +11,7 @@ public interface TransactionDao {
     public List<Trx> getAllTransactions();
     public Trx findByDataAndTimestamp(String data, String timestamp);
     public void clear();
-//    public void insertAll(List<Trx> trxList);
+    public Trx findById(int id);
+    public void update(Trx trx);
+    public void delete(int id);
 }

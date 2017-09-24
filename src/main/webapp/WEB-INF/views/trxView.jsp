@@ -30,7 +30,7 @@
         <% lineColor = getLineColor(lineColor); %>
             <tr class="trxLine">
                 <td class="trxCell" align="center" style="background-color: <%= lineColor %>; width: 50px"><%= trx.getVersion()%></td>
-                <td class="trxCell" align="center" style="background-color: <%= lineColor %>;"><%= trx.getData()%></td>
+                <td class="trxCell" align="center" style="width: 600px; background-color: <%= lineColor %>;"><%= trx.getData()%></td>
                 <td class="trxCell" align="center" style="background-color: <%= lineColor %>; width: 150px"><%= Tools.getDateByPattern(trx.getTimestamp(), "dd MM yyyy HH:mm:ss")%></td>
                 <td align="center" style="background-color: <%= lineColor %>; width: 50px"><a href="/editTrx?id=<%= trx.getId()%>">Edit</a></td>
                 <td align="center" style="background-color: <%= lineColor %>; width: 50px"><a href="/deleteTrx?id=<%= trx.getId()%>">Delete</a></td>
